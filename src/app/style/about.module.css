@@ -1,0 +1,14 @@
+/* about.module.css */
+
+/* Image Styling */
+.image {
+    border-radius: 8px; /* Rounded corners for images */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .image:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+  }
+  

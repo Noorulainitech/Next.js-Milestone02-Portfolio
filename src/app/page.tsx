@@ -1,101 +1,132 @@
 import Image from "next/image";
-
+import style from "../style/main.module.css";
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white pt-[200px]">
+      {/* First Section */}
+      <div className="max-w-4xl flex items-center mb-16">
+        {/* Text Section */}
+        <div className="text-left space-y-4">
+          <h1 className="text-4xl font-bold">HI!</h1>
+          <p className="text-gray-400">
+            Im, a passionate and innovative web developer dedicated to creating
+            dynamic, user-centric, and visually captivating websites and applications.
+            With a strong foundation in front-end and back-end development, I specialize
+            in crafting seamless digital experiences that blend creativity with functionality.
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        {/* Image Section */}
+        <div className="ml-8">
+          <div className="rounded-full overflow-hidden border-4 border-gray-600 w-48 h-48">
+            <Image
+              src="/images/noorr.jpg" // Ensure the image is in the public folder
+              alt="Lego Character"
+              width={192}
+              height={192}
+              className="object-cover"
+            />
+          </div>
+          <p className="mt-4 text-center text-xl text-gray-400 text-semibold">
+            Noor Ul Ain
+          </p>
+        </div>
+      </div>
+
+      {/* Second Section */}
+      <div className="w-full px-4 pb-[100px]">
+        <h2 className="text-3xl font-bold text-center mb-8">Projects</h2>
+        <div className="flex flex-wrap justify-center gap-6">
+          {/* Card 1 */}
+          <div className="bg-gray-800 rounded-lg p-4 w-64 shadow-lg">
+            <div className="w-full h-32 mb-4 overflow-hidden rounded-lg">
+              <a href="https://next-js-milestone1-hello-world-qvzoc1m54.vercel.app">
+                <Image
+                  src="/images/hello world.png" // Replace with your image in the public folder
+                  alt="Project Three"
+                  width={256}
+                  height={128}
+                  className="object-cover w-full h-full"
+                />
+              </a>
+
+            </div>
+            <h3 className="text-xl font-bold mb-2">Hello World</h3>
+            <p className="text-gray-400">
+              A brief description of the first project. Itss a fantastic one!
+            </p>
+          </div>
+
+          {/* Card 2 */}
+          <div className="bg-gray-800 rounded-lg p-4 w-64 shadow-lg">
+            <div className="w-full h-32 mb-4 overflow-hidden rounded-lg">
+              <a href="https://static-resume-hackathon-milestone-6bl8aa6i4.vercel.app">
+                <Image
+                  src="/images/static resume builder.jpg" // Replace with your image in the public folder
+                  alt="Project One"
+                  width={256}
+                  height={128}
+                  className="object-cover w-full h-full"
+                />
+              </a>
+
+            </div>
+            <h3 className="text-xl font-bold mb-2">Static Resume Builder</h3>
+            <p className="text-gray-400">
+              A short overview of the second project. Truly remarkable!
+            </p>
+          </div>
+
+          {/* Card 3 */}
+          <div className="bg-gray-800 rounded-lg p-4 w-64 shadow-lg">
+            <div className="w-full h-32 mb-4 overflow-hidden rounded-lg">
+
+              <a href="https://dynamic-resume-builder-hackathon-milestone-fosj73t8d.vercel.app/">
+                <Image
+                  src="/images/resume builder.jpg" // Replace with your image in the public folder
+                  alt="resume builder"
+                  width={256}
+                  height={128}
+                  className="object-cover w-full h-full"
+                />
+              </a>
+
+            </div>
+            <h3 className="text-xl font-bold mb-2">Dynamic Resume Builder</h3>
+            <p className="text-gray-400">
+              Details about the third project. Its absolutely incredible!
+            </p>
+          </div>
+        </div>
+      </div>
+      {/* Third Section */}
+      <div className="max-w-4xl flex items-center mb-16">
+        {/* Text Section */}
+        <div className="text-left space-y-6">
+          <h1 className="text-4xl font-bold mb-6">What I Bring to the Table!</h1>
+          <ul className="space-y-4">
+            <li className="flex">
+              <span className="font-semibold text-gray-300 mr-8">Front-End Expertise:</span>
+              <span className="text-gray-400">
+                Skilled in HTML, CSS, JavaScript, and frameworks like Next.js and Tailwind CSS, 
+                I translate design visions into pixel-perfect interfaces.
+              </span>
+            </li>
+            <li className="flex">
+              <span className="font-semibold text-gray-300 mr-2">Responsive Design:</span>
+              <span className="text-gray-400 mr-1">
+                Ensuring every project is optimized for desktops, tablets, and smartphones.
+              </span>
+            </li>
+            <li className="flex">
+              <span className="font-semibold text-gray-300 mr-2">Problem Solver:</span>
+              <span className="text-gray-400 mr-2">
+                I thrive on challenges, tackling complex coding problems to deliver elegant solutions.
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
