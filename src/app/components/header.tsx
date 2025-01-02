@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -25,15 +26,15 @@ export default function Header() {
 
         {/* Desktop Links */}
         <nav className="hidden md:flex gap-4">
-          <a href="/" className="text-gray-700 hover:text-blue-600">
+          <Link href="/" className="text-gray-700 hover:text-blue-600">
             Home
-          </a>
-          <a href="/about" className="text-gray-700 hover:text-blue-600">
+          </Link>
+          <Link href="/about" className="text-gray-700 hover:text-blue-600">
             About
-          </a>
-          <a href="/contact-us" className="text-gray-700 hover:text-blue-600">
+          </Link>
+          <Link href="/contact-us" className="text-gray-700 hover:text-blue-600">
             Contact
-          </a>
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -71,24 +72,24 @@ export default function Header() {
       {/* Mobile Menu */}
       {menuOpen && (
         <nav className="md:hidden bg-white shadow">
-          <a
+          <Link
             href="/"
             className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600"
           >
             Home
-          </a>
-          <a
+          </Link>
+          <Link
             href="/about"
             className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600"
           >
             About
-          </a>
-          <a
+          </Link>
+          <Link
             href="/contact-us"
             className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600"
           >
             Contact
-          </a>
+          </Link>
         </nav>
       )}
     </header>
